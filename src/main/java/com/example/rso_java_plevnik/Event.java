@@ -2,7 +2,7 @@ package com.example.rso_java_plevnik;
 
 import java.time.LocalDate;
 
-public class Event {
+public class Event{
     private int id;
     private String name;
     private LocalDate date;

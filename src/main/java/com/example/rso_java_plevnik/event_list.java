@@ -4,39 +4,47 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Event_list{
-    private int id;
-    private List<Event> events;
+public class Event_list}
 
-    public EventList(int id) {
-        this.id = id;
-        this.events = new ArrayList<>();
-    }
+        protected ArrayList<Event> events;
+        protected int id;
+        protected double najblizjiEvent;
 
-    public void addEvent(Event event) {
-        events.add(event);
-    }
-
-    public List<Event> getEvents() {
-        return events;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public LocalDate getNextEventDate() {
-        LocalDate currentDate = LocalDate.now();
-        LocalDate closestDate = null;
-
-        for (Event event : events) {
-            if (event.getDate().isAfter(currentDate)) {
-                if (closestDate == null || event.getDate().isBefore(closestDate)) {
-                    closestDate = event.getDate();
-                }
-            }
+        public EventList(){
+            this.events = new ArrayList<Event>();
+            this.id = 0;
+            this.najblizjiEvent = 0;
         }
 
-        return closestDate;
+        public void addEvent(Event event){
+            this.events.add(event);
+        }
+
+        public void removeEvent(Event event){
+            this.events.remove(event);
+        }
+
+        public ArrayList<Event> getEvents(){
+            return this.events;
+        }
+
+        public void setEvents(ArrayList<Event> events){
+            this.events = events;
+        }
+
+        public int getId(){
+            return this.id;
+        }
+
+        public void setId(int id){
+            this.id = id;
+        }
+
+        public double getNajblizjiEvent(){
+            return this.najblizjiEvent;
+        }
+
+        public void setNajblizjiEvent(double najblizjiEvent){
+            this.najblizjiEvent = najblizjiEvent;
+        }
     }
-}

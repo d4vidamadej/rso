@@ -1,37 +1,37 @@
 package com.example.rso_java_plevnik;
 
-public class User {
-    private String firstName;
-    private String lastName;
-    private String password;
+public class User{
+    protected String ime;
+    protected String priimek;
+    protected String geslo;
 
-    public User(String firstName, String lastName, String password) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.password = password;
+    public User(String ime, String priimek, String geslo){
+        this.ime = ime;
+        this.priimek = priimek;
+        this.geslo = geslo;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getIme(){
+        return this.ime;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setIme(String ime){
+        this.ime = ime;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getPriimek(){
+        return this.priimek;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setPriimek(String priimek){
+        this.priimek = priimek;
     }
 
-    public String getPassword() {
-        return password;
+    public String getGeslo(){
+        return this.geslo;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setGeslo(String geslo){
+        this.geslo = geslo;
     }
 }
