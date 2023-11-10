@@ -1,6 +1,6 @@
 package com.example.rso_java_plevnik;
 
-public class User{
+public class User {
     protected String ime;
     protected String priimek;
     protected String geslo;

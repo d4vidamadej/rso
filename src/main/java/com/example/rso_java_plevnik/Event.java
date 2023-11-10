@@ -1,39 +1,42 @@
 package com.example.rso_java_plevnik;
 
 import java.time.LocalDate;
-
-public class Event{
-    private int id;
-    private String name;
-    private LocalDate date;
-
-    public Event(int id, String name, LocalDate date) {
+import java.io.Serializable;
+public class Event implements Serializable{
+    protected int id;
+    protected String ime;
+    protected LocalDate date;
+    public Event(int id, String ime, LocalDate date){
         this.id = id;
-        this.name = name;
+        this.ime = ime;
         this.date = date;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
+    public void setId(int id){
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public int getId(){
+        return this.id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getIme(){
+        return this.ime;
     }
 
-    public LocalDate getDate() {
-        return date;
+    public void setIme(String ime){
+        this.ime = ime;
     }
 
-    public void setDate(LocalDate date) {
+    public LocalDate getDate(){
+        return this.date;
+    }
+
+    public void setDate(LocalDate date){
         this.date = date;
+    }
+
+    public String toString(){
+        return this.ime + " " + this.date.toString();
     }
 }
